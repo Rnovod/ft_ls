@@ -116,7 +116,7 @@ HEAD_FLAGS	=	-I $(INC_DIR)
 
 HEADER		=	$(INC_DIR)libft.h
 
-CC_FLAGS	=	-Wall -Werror -Wextra -std=c11
+CC_FLAGS	=	-Wall -Werror -Wextra -std=c11 -O3
 
 CC			=	gcc
 
