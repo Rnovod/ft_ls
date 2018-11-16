@@ -21,8 +21,8 @@ size_t					ft_strlen(const char *str)
 	lp = (const unsigned long int*)p;
 	while (42)
 	{
-	    if ((*lp - 0x101010101010101L) & 0x8080808080808080L)
-	    {
+		if ((*lp - 0x101010101010101L) & 0x8080808080808080L)
+		{
 			p = (const char *)(lp);
 			TESTBYTE(0);
 			TESTBYTE(1);

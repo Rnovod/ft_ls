@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static inline void	ft_cpy(intmax_t dst, intmax_t cccc, size_t n)
+static inline intmax_t	ft_cpy(intmax_t dst, intmax_t cccc, size_t n)
 {
 	size_t		xlen;
 
@@ -38,9 +38,10 @@ static inline void	ft_cpy(intmax_t dst, intmax_t cccc, size_t n)
 		dst += 8;
 		--xlen;
 	}
+	return (dst);
 }
 
-void				*ft_memset(void *s, int c, size_t n)
+void					*ft_memset(void *s, int c, size_t n)
 {
 	intmax_t	dst;
 	intmax_t	cccc;
@@ -52,7 +53,7 @@ void				*ft_memset(void *s, int c, size_t n)
 		cccc |= cccc << 8;
 		cccc |= cccc << 16;
 		cccc |= (cccc << 16) << 16;
-		ft_cpy(dst, cccc, n);
+		dst = ft_cpy(dst, cccc, n);
 	}
 	n %= 8;
 	while (n > 0)
